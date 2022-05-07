@@ -27,7 +27,7 @@ export const ModalProvider = ({ children }: Props) => {
     return <ModalContext.Provider value={{ open, close, setModalContent, visible: showModal }}>
         {children}
         {showModal ?
-            <Modal>
+            <Modal onDismiss={close}>
                 {modalContent}
             </Modal>
         : null}

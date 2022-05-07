@@ -1,12 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import './App.css';
-import { ModalContext } from './contexts/ModalContext';
+import { useModal } from './hooks/useModal';
 
 function App() {
-  const {open, close, setModalContent, visible} = useContext(ModalContext)
+  const {show, close, visible} = useModal(<div>MODAL</div>)
+
   return (
     <div className="App">
-      <button onClick={() => {visible ? close() : open()}}>Turn the Modal {visible ? "OFF" : "ON"}</button>
+      <button onClick={() => {visible ? close() : show()}}>Turn the Modal {visible ? "OFF" : "ON"}</button>
     </div>
   );
 }
