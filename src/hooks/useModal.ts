@@ -1,4 +1,4 @@
-import React, { useCallback, useContext } from "react";
+import { useCallback, useContext } from "react";
 import { ModalContext } from "../contexts/ModalContext";
 
 export const useModal = (modalContent: JSX.Element) => {

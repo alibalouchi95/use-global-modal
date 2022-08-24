@@ -1,6 +1,5 @@
 import React from 'react'
 import OutsideClick from './OutsideClick'
-import "./Modal.css"
 
 type Props = {
     children: JSX.Element | undefined;
@@ -8,11 +7,14 @@ type Props = {
     onDismiss: () => void
 }
 
-const CModal = ({children, styles, onDismiss}:Props) => {
-  return <OutsideClick callBack={onDismiss}>
-    <div className='modal' style={styles}>
-        {children}
-    </div>
+const CModal = ({ children, styles, onDismiss }: Props) => {
+    return <OutsideClick callBack={onDismiss}>
+        <div style={{
+            ...styles, padding: "5px",
+            backgroundColor: "white"
+        }}>
+            {children}
+        </div>
     </OutsideClick>
 }
 
