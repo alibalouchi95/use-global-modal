@@ -6,8 +6,7 @@ export const useModal = (modalContent: JSX.Element) => {
 
     const show = useCallback((_modalContent?: JSX.Element, modalOptions?: ModalOptions) => {
         setModalContent(_modalContent ? _modalContent : modalContent)
-        if(modalOptions) setModalOptions(modalOptions)
-        else setModalOptions(undefined)
+        setModalOptions(modalOptions ? modalOptions : {disableDismissOnOutsideClick: false})
         open()
     }, [])
 
