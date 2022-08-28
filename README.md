@@ -46,3 +46,8 @@ const {show, close, visible} = useModal(<ModalComponent />)
 the `useModal` hook gets `<ModalComponent />` as input and returns two methods (show and close) and one value (visible) as output:
 
 - `<ModalComponent />`: This is a custom component which you want to appear in the modal.
+- `show`: this method can get two values as inputs:
+  - The first one is the modal component (with type `JSX.Element`) for showing the modal with different component than the default one
+  - The second one is an object (with type `ModalOptions`) which supports one option only at this time (the `disableDismissOnOutsideClick` with type boolean).
+
+here's a full example of how to use this package in [code sandbox](https://codesandbox.io/s/global-modal-example-qw4e4w).
