@@ -1,6 +1,6 @@
 # global-modal
 
-this is a very simple package for opening a modal in the High Order Component (HOC) using react context.
+Wonderfully lightweight package for using modals in a react app.
 
 ## Instalation
 
